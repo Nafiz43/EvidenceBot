@@ -210,7 +210,17 @@ with col1:
     # m_name = st.selectbox('Model Name', ['llama2:latest', 'LLAMA2-70B', 'LLAMA3-8B', 'MIXTRAL-7B', 'MIXTRAL-8x7B'])
     m_name = st.selectbox("Choose a model", model_names)
 with col2:
-    EMBEDDING_MODEL_NAME = st.selectbox('Embedding Model', ['hkunlp/instructor-large', 'hkunlp/instructor-base'])
+    EMBEDDING_MODEL_NAME = st.selectbox(
+    'Embedding Model', 
+    [
+        'hkunlp/instructor-large', 
+        'hkunlp/instructor-base', 
+        'sentence-transformers/all-MiniLM-L6-v2', 
+        'sentence-transformers/paraphrase-mpnet-base-v2', 
+        'sentence-transformers/distiluse-base-multilingual-cased-v2', 
+        'sentence-transformers/all-distilroberta-v1'
+    ]
+)
 
 
 col14, col15 = st.columns(2)
@@ -254,7 +264,7 @@ selected_option= st.radio(
     "Choose an option:",
     ["Individual Question Mode", "Batch Question Mode"],
     horizontal=True,  # Enables horizontal layout
-    # key="horizontal_radio"
+    key="generate_horizontal_radio"
 )
 
 if selected_option=="Individual Question Mode":

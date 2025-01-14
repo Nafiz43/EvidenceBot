@@ -11,8 +11,8 @@ To install the app, we have to do the following:
 
 3. Create and activate a new virtual environment:
    ```bash
-   conda create -n localGPT python=3.10.0
-   conda activate localGPT
+   conda create -n EvidenceBot python=3.10.0
+   conda activate EvidenceBot
    ```
 
 4. Install all the requirements:
@@ -138,3 +138,6 @@ The Model parameters are as follows:
 
 9. *mirostat_tau:*  
    The target perplexity value for Mirostat. This sets the desired balance between diversity and coherence in the generated text. Default: `5.0`.
+
+## Video Demonstration
+Here is the link to the video demonstration: ![Link](https://www.youtube.com/watch?v=oZZRDebxTBg)
