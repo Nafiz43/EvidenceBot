@@ -177,7 +177,7 @@ selected_option = st.radio(
     "Choose an option:",
     ["Individual Response Evaluation Mode", "Batch Response Evaluation Mode"],
     horizontal=True,  # Enables horizontal layout
-    key="horizontal_radio"
+    # key="horizontal_radio"
 )
 
 # st.markdown('<b><h5>Evaluation Metrics:</h5></b>', unsafe_allow_html=True)

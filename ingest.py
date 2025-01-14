@@ -10,6 +10,8 @@ from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain.embeddings import HuggingFaceEmbeddings
+import shutil
+
 
 from constants import (
     CHROMA_SETTINGS,
@@ -28,9 +30,11 @@ import sys
 
 # EMBEDDING_MODEL_NAME = sys.argv[1]  # Retrieve the passed value
 EMBEDDING_MODEL_NAME = sys.argv[1] if len(sys.argv) > 1 else None
-CHUNK_SIZE = sys.argv[2] if len(sys.argv) > 1 else None
+CHUNK_SIZE = int(sys.argv[2]) if len(sys.argv) > 1 else None
 
 print(f"Received value: {EMBEDDING_MODEL_NAME}")
+print(f"CHUNK_SIZE: {CHUNK_SIZE}")
+
 
 def get_embeddings(device_type="cuda"):
     return HuggingFaceInstructEmbeddings(
@@ -167,6 +171,8 @@ def split_documents(documents: list[Document]) -> tuple[list[Document], list[Doc
 #     help="Device to run on. (Default is cuda)",
 # )
 def main():
+    shutil.rmtree(PERSIST_DIRECTORY)
+
     # Load documents and split in chunks
     logging.info(f"Loading documents from {SOURCE_DIRECTORY}")
     documents = load_documents(SOURCE_DIRECTORY)

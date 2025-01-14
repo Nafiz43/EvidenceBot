@@ -254,7 +254,7 @@ selected_option= st.radio(
     "Choose an option:",
     ["Individual Question Mode", "Batch Question Mode"],
     horizontal=True,  # Enables horizontal layout
-    key="horizontal_radio"
+    # key="horizontal_radio"
 )
 
 if selected_option=="Individual Question Mode":
@@ -334,7 +334,7 @@ if __name__ == "__main__":
     if st.button("Send"):
         if not st.session_state.first_click_done:
           print("sending value")
-          subprocess.run(['python', 'ingest.py', EMBEDDING_MODEL_NAME, Chunk_Size])
+          subprocess.run(['python', 'ingest.py', EMBEDDING_MODEL_NAME, str(Chunk_Size)])
           st.session_state.first_click_done = True
 
 
@@ -371,8 +371,8 @@ if __name__ == "__main__":
         elif selected_option == "Batch Question Mode":
             progress_text = st.empty()  # Create an empty placeholder
             for index, row in query_file_data.iterrows():
-                if index == 0:
-                  continue  # Skip the first row
+                # if index == 0:
+                #   continue  # Skip the first row
                 get_llm_response(row[query_file_data.columns[0]])
                 progress_text.text(f"Processed {index + 1} out of {len(query_file_data)}")
             st.write("Processing Finished...")
