@@ -140,4 +140,4 @@ The Model parameters are as follows:
    The target perplexity value for Mirostat. This sets the desired balance between diversity and coherence in the generated text. Default: `5.0`.
 
 ## Video Demonstration
-Here is the link to the video demonstration: ![Link](https://www.youtube.com/watch?v=oZZRDebxTBg)
+Here is the link to the video demonstration: [Link](https://www.youtube.com/watch?v=oZZRDebxTBg)
