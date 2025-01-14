@@ -50,6 +50,7 @@ The model selection field within the application is dynamic and automatically de
 If any changes are made to the parameters during the session, it is necessary to restart the application to ensure that these updates are reflected in the vector database.
 
 ![Generating Individual Responses](https://github.com/Nafiz43/EvidenceBot/blob/main/figs/gen_ind_pre.jpeg)
+*Figure 1: Generating Individual Responses*
 
 Upon submission of a prompt by the user, the application processes it and generates a response based on the selected model. A sample output is displayed in Figure \ref{gen_ind_post}. In this example, the generated response is presented alongside the source content. The source content refers to the text chunks extracted from the vector database that are passed to the LLM as context to facilitate a more informed and relevant response. The user can view both the model's output and the associated source content for each query. Furthermore, the model's response is logged in the `logs` directory in the `history.csv` file, along with the corresponding timestamp. This logging functionality provides users with the ability to track and compare responses over time, as the logs store both the original prompt and the generated response for each session.
 
