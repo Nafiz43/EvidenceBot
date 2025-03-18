@@ -79,7 +79,7 @@ def load_document_batch(filepaths):
         futures = [exe.submit(load_single_document, name) for name in filepaths]
         # collect data
         if futures is None:
-            file_log(name + " failed to submit")
+            file_log("failed to submit")
             return None
         else:
             data_list = [future.result() for future in futures]

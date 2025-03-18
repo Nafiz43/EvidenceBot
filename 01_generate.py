@@ -1,12 +1,10 @@
 import os
 import logging
-import click
 import torch
 import utils
 import pandas as pd
 from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceInstructEmbeddings
-from langchain.llms import HuggingFacePipeline
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler  # for streaming response
 from langchain.callbacks.manager import CallbackManager
 from langchain.llms import Ollama
@@ -28,8 +26,8 @@ from langchain.vectorstores import Chroma
 
 from constants import (
     PERSIST_DIRECTORY,
-    MAX_NEW_TOKENS,
-    MODELS_PATH,
+    # MAX_NEW_TOKENS,
+    # MODELS_PATH,
     CHROMA_SETTINGS,
 )
 

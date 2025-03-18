@@ -1,17 +1,13 @@
 import pandas as pd
-import torch
 from sentence_transformers import SentenceTransformer
 from bert_score import BERTScorer
 from rouge_score import rouge_scorer
-from nltk.translate import meteor_score
 from sentence_transformers import SentenceTransformer, util
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from rouge_score import rouge_scorer
 import streamlit as st
 import plotly.express as px
 import math
 from collections import Counter
-import evaluate
 import numpy as np
 # st.set_page_config(page_title='EvidenceBot - Evaluate')
 
