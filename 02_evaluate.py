@@ -64,9 +64,9 @@ if selected_option=="Batch Response Evaluation Mode":
 else:
     text_boxes = st.columns(2)
     with text_boxes[0]:
-        reference_text = st.text_area('Reference Text', 'Reference text goes here...')
+        reference_text = st.text_area('Reference Text', 'Reference text goes here...', help='It is the ground truth text.')
     with text_boxes[1]:
-        candidate_text = st.text_area('Candidate Text', 'Candidate text goes here...')
+        candidate_text = st.text_area('Candidate Text', 'Candidate text goes here...', help='It is the generated text that needs to be evaluated.')
 
 
 

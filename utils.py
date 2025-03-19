@@ -252,3 +252,45 @@ nav_bar_evaluate_page = """
   </ul>
 </nav>
 """
+
+helper_model = """    
+    Refers to the name or identifier of the local model used for generating responses. This model is responsible for processing input data, understanding context, and generating relevant outputs. Examples include `llama2:latest` or any model available in the local `ollama` environment.
+    """
+
+helper_embedding_model = """    
+    Refers to the name or identifier of the embedding model employed to generate vector representations of the input data. This model is critical in tasks involving similarity searches, semantic understanding, or clustering, as it transforms raw data (e.g., text) into numerical embeddings that capture meaningful relationships and contextual semantics. Examples include `openai/text-embedding-ada-002` or custom-trained models
+    """
+
+helper_chunk_size = """
+    Defines the size of each segment or chunk of text that is processed or embedded individually. This parameter determines how input data is divided into smaller, manageable pieces, typically measured in terms of characters, words, or tokens. Choosing an appropriate chunk size is essential to balance between capturing enough context in each chunk and avoiding excessive data redundancy or model limitations.
+    """
+helper_k = """
+    Specifies the number of top results or nearest neighbors to return during similarity search or retrieval operations. This parameter determines how many entries from the database are considered most relevant to the input query, based on their similarity scores. Higher values of `K` provide broader results, while lower values focus on the most relevant matches.
+    """
+helper_temp = """
+    Controls the randomness of the model's output. A higher value (e.g., `1.0`) results in more diverse outputs, while a lower value (e.g., `0.2`) makes the output more deterministic and focused.
+    """
+helper_top_p = """
+    Regulates the probability mass of the tokens considered for sampling. The model selects from the smallest possible set of tokens whose cumulative probability is greater than or equal to `top_p`. A value of `0.9` typically balances diversity and relevance.
+    """
+helper_top_k = """
+    Limits the model to sampling from the top `K` most likely tokens at each step. For example, setting `top_k = 50` considers only the top 50 tokens for generating the next word.
+    """
+helper_tfs_z = """
+    Adjusts sampling by filtering tokens based on their tail free distribution. This helps to maintain a balance between creative and coherent output. A value of `1.0` retains all tokens, while lower values filter out less probable tokens.
+    """
+helper_num_ctx = """
+    Defines the maximum number of tokens the model considers as context for generating predictions. A higher value allows the model to consider more history but increases computational cost.
+    """
+helper_repeat_penalty = """
+    Discourages the model from repeating the same tokens by applying a penalty to their probability during sampling. A value greater than `1.0` (e.g., `1.1`) reduces repetition, while `1.0` disables the penalty.
+    """
+helper_mirostat = """
+    A dynamic sampling technique aimed at maintaining a target perplexity during text generation. This helps to produce outputs with consistent quality and coherence.
+    """
+helper_mirostat_eta = """
+    The learning rate for updating the perplexity in Mirostat. It determines how quickly the algorithm adjusts to achieve the target perplexity.
+    """
+helper_mirostat_tau = """
+    The target perplexity value for Mirostat. This sets the desired balance between diversity and coherence in the generated text.
+    """
