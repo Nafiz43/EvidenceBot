@@ -1,8 +1,6 @@
 import logging
 import os
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
-
-# import click
 import torch
 from langchain.docstore.document import Document
 from langchain.text_splitter import Language, RecursiveCharacterTextSplitter
@@ -140,38 +138,11 @@ def split_documents(documents: list[Document]) -> tuple[list[Document], list[Doc
                 text_docs.append(doc)
     return text_docs, python_docs
 
-
-# @click.command()
-# @click.option(
-#     "--device_type",
-#     default="cuda" if torch.cuda.is_available() else "cpu",
-#     type=click.Choice(
-#         [
-#             "cpu",
-#             "cuda",
-#             "ipu",
-#             "xpu",
-#             "mkldnn",
-#             "opengl",
-#             "opencl",
-#             "ideep",
-#             "hip",
-#             "ve",
-#             "fpga",
-#             "ort",
-#             "xla",
-#             "lazy",
-#             "vulkan",
-#             "mps",
-#             "meta",
-#             "hpu",
-#             "mtia",
-#         ],
-#     ),
-#     help="Device to run on. (Default is cuda)",
-# )
 def main():
-    shutil.rmtree(PERSIST_DIRECTORY)
+    try:
+        shutil.rmtree(PERSIST_DIRECTORY)
+    except:
+        pass   
 
     # Load documents and split in chunks
     logging.info(f"Loading documents from {SOURCE_DIRECTORY}")
