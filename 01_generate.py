@@ -99,7 +99,7 @@ with col1:
     m_name = st.selectbox("**LLM Model**", model_names, help=helper_model)
 with col2:
     EMBEDDING_MODEL_NAME = st.selectbox(
-    'Embedding Model', 
+    '**Embedding Model**', 
     [
         'hkunlp/instructor-large', 
         'hkunlp/instructor-base', 
@@ -115,7 +115,7 @@ col14, col15 = st.columns(2)
 
 with col14:
     Chunk_Size = st.number_input(
-        "Chunk_Size", 
+        "**Chunk_Size**", 
         min_value=10, 
         max_value=10000, 
         step=10, 
@@ -125,7 +125,7 @@ with col14:
 
 with col15:
     size_of_k = st.number_input(
-        "K", 
+        "**K**", 
         min_value=1, 
         max_value=100, 
         step=1, 
@@ -141,31 +141,31 @@ with col3:
 with col4:
     top_p = st.number_input("**Top_P**", min_value=0.0, max_value=1.0, step=0.01, value=0.1, help=helper_top_p)
 with col5:
-    top_k = st.number_input("Top_K", min_value=0, max_value=100, step=10, value=10, help=helper_top_k)
+    top_k = st.number_input("**Top_K**", min_value=0, max_value=100, step=10, value=10, help=helper_top_k)
 
 
 
 col6, col7, col8 = st.columns(3)
 with col6:
-    tfs_z = st.number_input("tfs_z", min_value=0.0, max_value=5.0, step=0.01, value=2.0, help=helper_tfs_z)
+    tfs_z = st.number_input("**tfs_z**", min_value=0.0, max_value=5.0, step=0.01, value=2.0, help=helper_tfs_z)
 with col7:
-    num_ctx = st.number_input("num_ctx", min_value=0, max_value=100000, step=10, value=2048, help=helper_num_ctx)
+    num_ctx = st.number_input("**num_ctx**", min_value=0, max_value=100000, step=10, value=2048, help=helper_num_ctx)
 with col8:
-    repeat_penalty = st.number_input("repeat_penalty", min_value=0.0, max_value=5.0, step=0.1, value=1.1, help=helper_repeat_penalty)
+    repeat_penalty = st.number_input("**repeat_penalty**", min_value=0.0, max_value=5.0, step=0.1, value=1.1, help=helper_repeat_penalty)
 
 
 col9, col10, col11 = st.columns(3)
 with col9:
-    mirostat = st.number_input("mirostat", min_value=0, max_value=100, step=1, value=0, help=helper_mirostat)
+    mirostat = st.number_input("**mirostat**", min_value=0, max_value=100, step=1, value=0, help=helper_mirostat)
 with col10:
-    mirostat_eta = st.number_input("mirostat_eta", min_value=0.0, max_value=5.0, step=0.1, value=0.01, help=helper_mirostat_eta)
+    mirostat_eta = st.number_input("**mirostat_eta**", min_value=0.0, max_value=5.0, step=0.1, value=0.01, help=helper_mirostat_eta)
 with col11:
-    mirostat_tau = st.number_input("mirostat_tau", min_value=0.0, max_value=5.0, step=0.1, value=5.0, help=helper_mirostat_tau)
+    mirostat_tau = st.number_input("**mirostat_tau**", min_value=0.0, max_value=5.0, step=0.1, value=5.0, help=helper_mirostat_tau)
 
 col12, col13 = st.columns(2)
 global selected_option
 selected_option= st.radio(
-    "Choose an option:",
+    "**Choose an option:**",
     ["Individual Question Mode", "Batch Question Mode"],
     horizontal=True,  # Enables horizontal layout
     key="generate_horizontal_radio"

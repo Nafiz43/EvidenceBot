@@ -1,13 +1,6 @@
 import pandas as pd
-# from sentence_transformers import SentenceTransformer
-# from bert_score import BERTScorer
-# from rouge_score import rouge_scorer
-# from sentence_transformers import SentenceTransformer, util
-# from rouge_score import rouge_scorer
 import streamlit as st
 import plotly.express as px
-# import math
-# from collections import Counter
 import numpy as np
 from utils import custom_css, nav_bar_evaluate_page, calculate_bleu_4, rouge_l_score, cosine_similarity_score, bert_score
 # st.set_page_config(page_title='EvidenceBot - Evaluate')
@@ -20,23 +13,11 @@ st.markdown(nav_bar_evaluate_page, unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 selected_option = st.radio(
-    "Choose an option:",
+    "**Choose an option:**",
     ["Individual Response Evaluation Mode", "Batch Response Evaluation Mode"],
     horizontal=True,  # Enables horizontal layout
     key="horizontal_radio_evaluation"
 )
-
-# st.markdown('<b><h5>Evaluation Metrics:</h5></b>', unsafe_allow_html=True)
-
-# metric_options = st.columns(4)
-# with metric_options[0]:
-#     bert_checkbox = st.checkbox('BERT')
-# with metric_options[1]:
-#     bleu4_checkbox = st.checkbox('Bleu-4')
-# with metric_options[2]:
-#     rouge_l_checkbox = st.checkbox('Rouge-L')
-# with metric_options[3]:
-#     cosine_similarity_checkbox = st.checkbox('Cosine Similarity')
 
 
 if selected_option=="Batch Response Evaluation Mode":
@@ -64,7 +45,7 @@ if selected_option=="Batch Response Evaluation Mode":
 else:
     text_boxes = st.columns(2)
     with text_boxes[0]:
-        reference_text = st.text_area('Reference Text', 'Reference text goes here...', help='It is the ground truth text.')
+        reference_text = st.text_area('**Reference Text**', 'Reference text goes here...', help='It is the ground truth text.')
     with text_boxes[1]:
         candidate_text = st.text_area('Candidate Text', 'Candidate text goes here...', help='It is the generated text that needs to be evaluated.')
 
