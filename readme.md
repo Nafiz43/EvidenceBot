@@ -1,8 +1,30 @@
+# Recommended Hardware Configuration
+
+## Minimum System Requirements
+- **Processor**: Modern multi-core CPU (4+ cores recommended)
+- **RAM**: 16GB minimum
+- **Storage**: 10GB for application code and dependencies
+- **GPU**: CUDA-compatible GPU with 8GB+ VRAM recommended
+
+## Recommended Configuration
+- **Processor**: 8+ core CPU (e.g., Intel i7/i9 or AMD Ryzen 7/9)
+- **RAM**: 32GB or more
+- **Storage**: SSD with at least 50GB of free space
+- **GPU**: NVIDIA GPU with 16GB+ VRAM (e.g., RTX 3080 or better)
+
+> **Note**: While lower configurations are viable, performance may be compromised, leading to longer execution times and potential system slowdowns.
+
+## Cloud Deployment Alternative
+If deploying to cloud infrastructure:
+- Standard virtual machine with 8+ vCPUs
+- 32GB RAM
+- GPU acceleration if available
+
 ## App Installation
 
 To install the app, we have to do the following:
 
-1. Install Mini-Conda in your computer (if already not installed). The following link can be used for installation: [LINK](https://docs.anaconda.com/miniconda/install/#quick-command-line-install).
+1. Install Mini-Conda on your computer (if already not installed). The following link can be used for installation: [LINK](https://docs.anaconda.com/miniconda/install/#quick-command-line-install).
 
 2. Clone the repo using git:
    ```
