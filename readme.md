@@ -1,10 +1,10 @@
 # Recommended Hardware Configuration
 
 ### Minimum System Requirements
-- **Processor**: Modern multi-core CPU (4+ cores recommended)
+- **Processor**: Modern multi-core CPU (at least 4+ cores)
 - **RAM**: 16GB minimum
 - **Storage**: 10GB for application code and dependencies
-- **GPU**: CUDA-compatible GPU with 8GB+ VRAM recommended
+- **GPU**: CUDA-compatible GPU with 8GB+ VRAM
 
 ### Recommended Configuration
 - **Processor**: 8+ core CPU (e.g., Intel i7/i9 or AMD Ryzen 7/9)
