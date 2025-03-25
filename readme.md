@@ -1,16 +1,16 @@
 # Recommended Hardware Configuration
 
 ### Minimum System Requirements
-- **Processor**: Modern multi-core CPU (at least 4+ cores)
-- **RAM**: 16GB minimum
-- **Storage**: 10GB for application code and dependencies
-- **GPU**: CUDA-compatible GPU with 8GB+ VRAM
+- **Processor**: Modern multi-core CPU (at least 8+ cores)
+- **RAM**: 32GB minimum
+- **Storage**: 20GB for application code and dependencies
+- **GPU**: CUDA-compatible GPU with 8GB+ VRAM*
 
-### Recommended Configuration
-- **Processor**: 8+ core CPU (e.g., Intel i7/i9 or AMD Ryzen 7/9)
-- **RAM**: 32GB or more
-- **Storage**: SSD with at least 50GB of free space
-- **GPU**: NVIDIA GPU with 16GB+ VRAM (e.g., RTX 3080 or better)
+*The amount of VRAM required depends on the model that we want to run. Here is an estimate:
+7B model requires ~4 GB
+13B model requires ~8 GB
+30B model needs ~16 GB
+65B model needs ~32 GB
 
 > **Note**: While lower configurations are viable, performance may be compromised, leading to longer execution times and potential system slowdowns.
 
