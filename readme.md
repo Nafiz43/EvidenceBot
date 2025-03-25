@@ -3,7 +3,7 @@ EvidenceBot is a local, Retrieval-Augmented Generation (RAG)-based solution desi
 
 Link to the Paper: [EvidenceBot-FSE-Tool-Demo](https://drive.google.com/file/d/1lSl8PXrCvKIuOCeOzNE0KIPx-CMAP6OS/view).
 
-Link to Video Demo: [Demo](https://www.youtube.com/watch?v=oZZRDebxTBg)
+Link to Video Demo: [Demo-Video](https://www.youtube.com/watch?v=oZZRDebxTBg)
 
 ## Recommended Hardware Configuration
 
@@ -14,6 +14,7 @@ Link to Video Demo: [Demo](https://www.youtube.com/watch?v=oZZRDebxTBg)
 - **GPU**: CUDA-compatible GPU with 8GB+ VRAM**
 
 **The amount of VRAM required depends on the model that we want to run. Here is an estimate:
+
 7B model requires ~4 GB
 
 13B model requires ~8 GB
