@@ -15,8 +15,11 @@ Link to Video Demo: [Demo](https://www.youtube.com/watch?v=oZZRDebxTBg)
 
 **The amount of VRAM required depends on the model that we want to run. Here is an estimate:
 7B model requires ~4 GB
+
 13B model requires ~8 GB
+
 30B model needs ~16 GB
+
 65B model needs ~32 GB
 
 > **Note**: While lower configurations are viable, performance may be compromised, leading to longer execution times and potential system slowdowns.
