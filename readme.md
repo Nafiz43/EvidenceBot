@@ -4,7 +4,7 @@ EvidenceBot is a local, Retrieval-Augmented Generation (RAG)-based solution desi
 Link to the Paper: [EvidenceBot-FSE-Tool-Demo](https://docs.anaconda.com/miniconda/install/#quick-command-line-install).
 Link to Video Demo: [Demo](https://www.youtube.com/watch?v=oZZRDebxTBg)
 
-# Recommended Hardware Configuration
+## Recommended Hardware Configuration
 
 ### Minimum System Requirements
 - **Processor**: Modern multi-core CPU (at least 8+ cores)
@@ -26,7 +26,7 @@ If deploying to cloud infrastructure:
 - 32GB RAM
 - GPU acceleration if available
 
-# App Installation
+## App Installation
 
 To install the app, we have to do the following:
 
@@ -167,5 +167,5 @@ The Model parameters are as follows:
 9. *mirostat_tau:*  
    The target perplexity value for Mirostat. This sets the desired balance between diversity and coherence in the generated text. Default: `5.0`.
 
-# Video Demonstration
+## Video Demonstration
 Here is the link to the video demonstration: [Link](https://www.youtube.com/watch?v=oZZRDebxTBg)
