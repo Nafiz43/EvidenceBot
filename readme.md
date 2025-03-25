@@ -1,3 +1,9 @@
+# EvidenceBot
+EvidenceBot is a local, Retrieval-Augmented Generation (RAG)-based solution designed to overcome the limitations of commercial LLM platforms. EvidenceBot enables secure and efficient processing of large document sets through its privacy-preserving RAG pipeline, which extracts and appends only the most relevant text chunks as context for queries. The tool allows users to experiment with hyperparameter configurations, optimizing model responses for specific tasks, and includes an evaluation module to assess LLM performance against ground truths using semantic and similarity-based metrics.
+
+Link to the Paper: [EvidenceBot-FSE-Tool-Demo](https://docs.anaconda.com/miniconda/install/#quick-command-line-install).
+Link to Video Demo: [Demo](https://www.youtube.com/watch?v=oZZRDebxTBg)
+
 # Recommended Hardware Configuration
 
 ### Minimum System Requirements
