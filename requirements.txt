@@ -15,6 +15,8 @@ auto-gptq==0.6.0; sys_platform != 'darwin'
 docx2txt
 unstructured
 unstructured[pdf]
+bert_score
+rouge_score
 
 # Utilities
 urllib3==1.26.6

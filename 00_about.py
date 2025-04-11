@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 from utils import custom_css, nav_bar_about_page
 
 
@@ -6,12 +7,27 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown(nav_bar_about_page, unsafe_allow_html=True)
 
 
+# pdf_path = "figs/rag_pipeline.pdf"  # Make sure this path exists relative to your Streamlit app
+# components.html(f"""
+#     <iframe src="{pdf_path}" width="100%" height="600px" type="application/pdf"></iframe>
+# """, height=600)
+
+
 st.markdown("""
 # 🛠️ **About EvidenceBot**
 **EvidenceBot** is a cutting-edge, privacy-preserving tool designed to empower users with advanced interactions using Large Language Models (LLMs). By leveraging a Retrieval-Augmented Generation (RAG)-based pipeline, this app ensures efficient and secure processing of large document sets while maintaining data privacy.
 
 ---
+## 📖 **System Architecture**
+""")
 
+st.image(
+    "https://raw.githubusercontent.com/Nafiz43/portfolio/refs/heads/main/img/EvidenceBotArchitecture.png",
+    caption="EvidenceBot System Architecture",
+    use_container_width=True
+)
+
+st.markdown("""
 ## ✨ **Key Features**
 1. **Privacy-Preserving RAG Pipeline**:
    - Breaks documents into manageable chunks and retrieves only the most relevant context for queries.
