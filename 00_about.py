@@ -1,3 +1,7 @@
+"""
+Developed at DECAL Lab in CS Department @ UC Davis by Nafiz Imtiaz Khan (nikhan@ucdavis.edu)
+Copyright © 2025 The Regents of the University of California, Davis campus. All Rights Reserved. Used with permission.
+"""
 import streamlit as st
 import streamlit.components.v1 as components
 from utils import custom_css, nav_bar_about_page

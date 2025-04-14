@@ -1,4 +1,8 @@
 """
+Developed at DECAL Lab in CS Department @ UC Davis by Nafiz Imtiaz Khan (nikhan@ucdavis.edu)
+Copyright © 2025 The Regents of the University of California, Davis campus. All Rights Reserved. Used with permission.
+"""
+"""
 This file implements prompt template for llama based models. 
 Modify the prompt template based on the model you select. 
 """
