@@ -5,7 +5,6 @@ Copyright © 2025 The Regents of the University of California, Davis campus. All
 import os
 import re
 
-# Define the exact header blocks (must match what was inserted)
 HEADER_PATTERNS = {
     '.py': re.compile(
         r'(?s)^"""\s*Developed at DECAL Lab in CS Department @ UC Davis.*?Used with permission\.\s*"""\n*'
