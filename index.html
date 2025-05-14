@@ -6,8 +6,7 @@
         content="OSSPREY: Open Source Software PRojEct sustainabilitY tracker">
   <meta name="keywords" content="OSS">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OSSPREY
-  </title>
+  <title>EvidenceBot</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -19,7 +18,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.ico">
+  <link rel="icon" href="figs/EvidenceBotLogo.webp">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -58,20 +57,17 @@
           Previously Built Tools
         </a>
         <div class="navbar-dropdown">
-          
-          <a class="navbar-item" href="https://ossustain.github.io/APEX/" target="_blank">
-            APEX
-          </a>
-          <a class="navbar-item" href="https://swatisinghvi99.github.io/EPEX/" target="_blank">
-            EPEX
+      
+          <a class="navbar-item" href="https://oss-prey.github.io/OSSPREY-Website/" target="_blank">
+            OSSPREY
           </a>
           
           <a class="navbar-item" href="https://ossreacts.netlify.app/" target="_blank">
             ReACTive
           </a>
-          <a class="navbar-item" href="https://github.com/Nafiz43/EvidenceBot" target="_blank">
+          <!-- <a class="navbar-item" href="https://github.com/Nafiz43/EvidenceBot" target="_blank">
             EvidenceBot
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -105,16 +101,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <img src="static/images/favicon.ico" alt="OSSPREY System Architecture" style="height: 80px; width: 85px;">
-          <h1 class="title is-1 publication-title">OSSPREY: Open Source Software PRojEct sustainabilitY tracker</h1>
+          <img src="figs/EvidenceBotLogo.webp" alt="OSSPREY System Architecture" style="height: 80px; width: 85px;">
+          <h1 class="title is-1 publication-title">EvidenceBot: A Privacy-Preserving, Customizable RAG-Based Tool</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="">Priyal Soni</a>,</span>
+
             <span class="author-block">
               <a href="https://nafiz43.github.io/portfolio/" target="_blank">Nafiz Imtiaz Khan</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/arjashok" target="_blank">Arjun Ashok</a>,
             </span>
 
             <span class="author-block">
@@ -130,8 +122,8 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1lSl8PXrCvKIuOCeOzNE0KIPx-CMAP6OS/view"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -139,7 +131,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -149,7 +141,7 @@
                 </a>
               </span> -->
               <!-- Live Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://ossprey.netlify.app" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -157,10 +149,24 @@
                   </span>
                   <span>Live</span>
                 </a>
-              </span>
+              </span> -->
+
+
+              <!-- User Guide -->
+            <span class="link-block">
+              <a href="#user-guide" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-book"></i>
+                </span>
+                <span>User Guide</span>
+                </a>
+          </span>
+
+
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/OSS-PREY" target="_blank"
+                <a href="https://github.com/Nafiz43/EvidenceBot" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -169,7 +175,7 @@
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://zenodo.org/records/15307373" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -177,7 +183,12 @@
                   </span>
                   <span>Data</span>
                   </a>
-            </span>
+            </span> -->
+
+
+          
+
+
               <!-- Installation Manual. -->
             <span class="link-block">
               <a href="#Installation" target="_blank"
@@ -217,14 +228,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            OSSPREY (Open Source PRoject sustainabilitY tracker) is built to help open source projects not just survive, but thrive. Instead of relying on surface-level metrics, OSSPREY looks deeper — mapping how people collaborate, how code evolves, and how projects grow or struggle over time.
+          Large Language Models (LLMs) have become pivotal in reshaping the world by enabling advanced natural language processing tasks such as document analysis, content generation, and conversational assistance. Their ability to process and generate human-like text has unlocked unprecedented opportunities across different domains such as healthcare, education, finance, and more. However, commercial LLM platforms face several limitations, including data privacy concerns, context size restrictions, lack of parameter configurability, and limited evaluation capabilities. These shortcomings hinder their effectiveness, particularly in scenarios involving sensitive information, large-scale document analysis, or the need for customized output. This underscores the need for a tool that combines the power of LLMs with enhanced privacy, flexibility, and usability.
+          </p>
 
-            We combine network analysis, machine learning, and lessons pulled directly from real research to offer practical, evidence-based recommendations — not just vague advice. Our goal is simple: make it easier for maintainers, contributors, and foundations to spot risks early, understand what’s working, and take action to build more sustainable projects.
+          <p>
+          To address these challenges, we present <strong>EvidenceBot</strong>, a local, Retrieval-Augmented Generation (RAG)-based solution designed to overcome the limitations of commercial LLM platforms. EvidenceBot enables secure and efficient processing of large document sets through its privacy-preserving RAG pipeline, which extracts and appends only the most relevant text chunks as context for queries. The tool allows users to experiment with hyperparameter configurations, optimizing model responses for specific tasks, and includes an evaluation module to assess LLM performance against ground truths using semantic and similarity-based metrics. By offering enhanced privacy, customization, and evaluation capabilities, EvidenceBot bridges critical gaps in the LLM ecosystem, providing a versatile resource for individuals and organizations seeking to leverage LLMs effectively.
+          </p>
 
-            Open source is complex and always changing. OSSPREY gives you tools that grow with you — whether you're steering a small project or managing a major foundation’s portfolio. It’s not about static scores or dashboards; it’s about building a healthier future for your community.
-            </p>
-
-           <p>To learn more about OSSPREY, visit our live link at <a href="https://ossprey.netlify.app" target="_blank">ossprey.netlify.app</a>.</p>
+           <!-- <p>To learn more about OSSPREY, visit our live link at <a href="https://ossprey.netlify.app" target="_blank">ossprey.netlify.app</a>.</p> -->
            <!-- <p style="color: red; font-weight: bold;">
             Note: Due to compute constraints, the tool has been limited to a subset of Github projects for the time being. Apologies in advance until we expand the tool's domain soon!
           </p> -->
@@ -259,82 +270,157 @@
 
           <!-- System Architecture Image -->
           <figure class="image is-4by3">
-            <img src="static/images/system_architecture.png" alt="OSSPREY System Architecture" style="height: 80%;">
-            <figcaption class="has-text-centered is-size-6 mt-2">Figure: System architecture of OSSPREY</figcaption>
+            <img src="figs/EvidenceBotArchitecture.png" alt="EvidenceBot System Architecture" style="height: 70%; width: 100%;">
+            <figcaption class="has-text-centered is-size-6 mt-2">Figure: System architecture of EvidenceBot</figcaption>
           </figure>
 
-          <p>
-            <strong>OSSPREY</strong> leverages a robust data processing pipeline, socio-technical network modeling, machine learning predictions, and evidence-driven recommendations to support OSS maintainers and communities. Below is a detailed breakdown of its architecture.
+
+           <p>
+            The architecture of the proposed pipeline is shown in the system diagram. The pipeline is capable of processing documents in various formats, such as <code>HTML</code>, <code>txt</code>, <code>md</code>, <code>py</code>, <code>pdf</code>, <code>csv</code>, <code>xlsx</code>, and <code>docx</code>. To handle these different file types, the pipeline utilizes the <code>LangChain</code> document loader.
           </p>
 
-          <h4 class="title is-5 mt-5">1. Data Scraper (Rust)</h4>
           <p>
-            The pipeline begins with a fast and reliable data scraping engine implemented in <strong>Rust</strong>. This component retrieves raw project data from various open-source repositories such as GitHub, Apache, and Eclipse. It collects key information including commit histories, issue threads, pull requests, contributor activity, and email communications when available. Rust was chosen for its performance and memory safety, allowing efficient scraping of large datasets across many projects.
+            Once the documents are loaded, they are divided into smaller text chunks (default size = 512 tokens), with the option for the user to adjust the chunk size, thus controlling the number of chunks created for the given set of documents. These text chunks are then converted into embeddings using a preselected embedding model.
           </p>
 
-          <h4 class="title is-5 mt-5">2. Network Generator (Python)</h4>
           <p>
-            The next stage processes the raw data into structured monthly <strong>socio-technical networks</strong>. Two types of networks are constructed:
-            <ul>
-              <li><strong>Social Networks:</strong> Nodes are the developers who communicate via email, lists or issues, and edges indicate their communication. E.g., if A sends an email on the mailing list, and B replies, then A → B. Communication patterns correlate with productivity and organization.</li>
-              <li><strong>Technical Networks:</strong> Nodes are the developers (left) and files (right), edges indicate who committed code changes to the files (for tractability we aggregate files by their extensions). Multi-tasking and collaboration behaviors arise in the technical networks.</li>
-            </ul>
-            These dynamic networks offer a detailed view into how OSS communities organize and evolve over time.
+            Following this, the pipeline leverages <code>LangChain</code> to generate semantic indexes for each embedding, facilitating the retrieval and ranking of relevant information based on context and meaning, rather than relying on simple keyword matching. These embeddings and their corresponding semantic indexes are stored in <code>ChromaDB</code>, a high-performance vector database optimized for efficient similarity search.
           </p>
 
-          <h4 class="title is-5 mt-5">3. Health Predictor (Python)</h4>
           <p>
-            The <strong>Health Predictor</strong> is a machine learning module trained on historical OSS project data. It takes the extracted network metrics and evaluates the sustainability of a project using features such as:
-            <ul>
-              <li>Contributor centrality and diversity</li>
-              <li>Activity bursts and drop-offs</li>
-              <li>Network modularity and communication density</li>
-            </ul>
-            The output is a prediction about the project's health trajectory, such as whether it's on track to succeed, stagnate, or fail.
+            When a user submits a query, the pipeline converts it into an embedding using the same model as previously used for the documents. Then a semantic search is performed within the vector database, returning the top <em>k</em> most relevant results. The user can specify the value of <em>k</em> within the tool. These relevant text snippets are appended to the user's query and passed to the language model to ensure that the model has the complete context required to generate an accurate response. For compiling and running the language models, we used <code>Ollama</code>, which is an open-source platform that facilitates the deployment and management of local LLM models.
           </p>
 
-          <h4 class="title is-5 mt-5">4. ReACT Recommender (Python)</h4>
           <p>
-            OSSPREY goes a step further by offering actionable, research-backed advice via the <strong>ReACT (Researched Actionables) Recommender</strong>. Drawing from peer-reviewed software engineering literature, this module suggests concrete actions tailored to the project’s network profile. Each recommendation is grounded in published evidence and can include strategies like:
-            <ul>
-              <li>Implementing mentorship programs</li>
-              <li>Encouraging modularization of the codebase</li>
-              <li>Facilitating structured communication practices</li>
-            </ul>
-            This makes the platform not just diagnostic, but also prescriptive.
+            The EvidenceBot dashboard uses <code>Streamlit</code>, <code>HTML</code>, and <code>CSS</code> to create an intuitive, interactive user interface. <code>Streamlit</code> works as the primary framework, which enables integration with <code>Python</code> logic and language models while managing user inputs, file uploads, and dynamic outputs. <code>HTML</code> structures key elements such as the navigation bar, input forms, and chat containers, and <code>CSS</code> is used to enhance the visual design, setting background colors, adjusting container layouts, and ensuring responsiveness. The combination of these tools ensures a streamlined user experience.
           </p>
 
-          <h4 class="title is-5 mt-5">5. MongoDB (Data Store)</h4>
-          <p>
-            The entire system is underpinned by a <strong>MongoDB</strong> database that stores raw inputs, network outputs, prediction results, and recommendations. This NoSQL setup is ideal for managing OSS metadata, which is often semi-structured and variable in format across different ecosystems.
-          </p>
-
-          <h4 class="title is-5 mt-5">Data Flow Summary</h4>
-          <p>
-            The architecture follows a clean and modular data flow:
-          </p>
-          <pre><code>Raw OSS Data 
-    ↓
-Data Scraper (Rust) 
-    ↓
-Network Generator (Python) 
-    ↓
-Health Predictor (Python) 
-    ↓
-ReACT Recommender (Python) 
-    ↓
-Frontend + MongoDB Storage
-          </code></pre>
-
-          <p>
-            This system allows OSSPREY to move from passive monitoring to active sustainability guidance, tailored to each project’s unique socio-technical landscape.
-          </p>
 
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+<section class="section" id="user-guide">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">
+          <i class="fas fa-tools"></i> User Guide
+        </h2>
+        <div class="content has-text-justified">
+
+          <h3 class="title is-4">Generating Individual Responses</h3>
+          <p>The application is, by default, accessible at the following 
+            <a href="http://localhost:8501" target="_blank">link</a> on the local machine. In this mode, users can provide a prompt and receive responses generated by a selected Large Language Model (LLM). Users can also adjust several model parameters as described in the <strong>Application Parameters</strong> section.
+          </p>
+          <p>The model selector dynamically lists all LLMs installed locally. Upon query submission, the system builds a vector database from files placed in the <code>DATA_DOCUMENTS</code> folder. Relevant chunks are retrieved and provided as context to the model for response enhancement.</p>
+          <p>If any parameters are changed, the application should be restarted to regenerate the vector database accordingly.</p>
+          <figure>
+            <img src="figs/gen_ind_pre.jpeg" alt="Generate Individual Responses Functionality">
+            <figcaption>Figure 1: Generate Individual Responses Functionality</figcaption>
+          </figure>
+          <p>Responses are logged in the <code>logs/history.csv</code> file along with timestamps, original prompts, and source content.</p>
+          <figure>
+            <img src="figs/gen_ind_post.jpeg" alt="Generate Individual Responses Output">
+            <figcaption>Figure 2: Generate Individual Responses Output</figcaption>
+          </figure>
+
+          <h3 class="title is-4">Generating Batch Responses</h3>
+          <p>Selecting the <em>Batch Question Mode</em> enables processing a list of questions via uploaded <code>.csv</code> file. Each row should contain a single question, processed sequentially by the model.</p>
+          <figure>
+            <img src="figs/gen_batch_pre.jpeg" alt="Generate Batch Responses Functionality">
+            <figcaption>Figure 3: Generate Batch Responses Functionality</figcaption>
+          </figure>
+          <p>Progress is tracked during execution, and results are saved in <code>logs/history.csv</code>.</p>
+          <figure>
+            <img src="figs/gen_batch_post.jpeg" alt="Generate Batch Responses Output">
+            <figcaption>Figure 4: Generate Batch Responses Output</figcaption>
+          </figure>
+          <figure>
+            <img src="figs/gen_batch_post2.jpeg" alt="Generate Batch Responses Output File Format">
+            <figcaption>Figure 5: Generate Batch Responses Output File Format</figcaption>
+          </figure>
+
+          <h3 class="title is-4">Evaluating Individual Responses</h3>
+          <p>To evaluate an individual response, use the <code>Evaluate</code> mode at 
+            <a href="http://localhost:8502" target="_blank">localhost:8502</a>. Users must input both the reference and generated texts for comparison.
+          </p>
+          <figure>
+            <img src="figs/evaluate_ind_pre.jpeg" alt="Evaluate Individual Responses">
+            <figcaption>Figure 6: Evaluate Individual Responses Functionality</figcaption>
+          </figure>
+          <p>The tool outputs BLEU-4, ROUGE-L, BERTScore, and Cosine Similarity metrics with visualization support.</p>
+          <figure>
+            <img src="figs/evaluate_ind_post.jpeg" alt="Evaluate Individual Responses Output">
+            <figcaption>Figure 7: Evaluate Individual Responses Output</figcaption>
+          </figure>
+
+          <h3 class="title is-4">Evaluating Batch Responses</h3>
+          <p>Users can evaluate a batch of responses by uploading two <code>.csv</code> files: 
+            <code>reference.csv</code> (ground truth) and <code>candidate.csv</code> (model outputs).
+          </p>
+          <figure>
+            <img src="figs/evaluate_batch_pre.jpeg" alt="Evaluate Batch Responses">
+            <figcaption>Figure 8: Evaluate Batch Responses Input</figcaption>
+          </figure>
+          <p>The system visualizes metric comparisons across the dataset using bar plots.</p>
+          <figure>
+            <img src="figs/evaluate_batch_post.jpeg" alt="Evaluate Batch Responses Output">
+            <figcaption>Figure 9: Evaluate Batch Responses Output</figcaption>
+          </figure>
+
+          <h3 class="title is-4">App Parameters</h3>
+          <p>The app supports three RAG parameters and eight model-specific generation parameters.</p>
+
+          <h4 class="title is-5">RAG Parameters</h4>
+          <ul>
+            <li><strong>Embedding_model_name:</strong> Identifier of the embedding model (e.g., <code>openai/text-embedding-ada-002</code>).</li>
+            <li><strong>CHUNK_SIZE:</strong> Size of each input chunk in tokens/words/characters.</li>
+            <li><strong>K:</strong> Number of top entries to retrieve from the vector store for context injection.</li>
+          </ul>
+
+          <h4 class="title is-5">Model Parameters</h4>
+          <ul>
+            <li><strong>temp:</strong> Controls randomness; higher = more diverse (default: <code>1.0</code>).</li>
+            <li><strong>top_p:</strong> Nucleus sampling threshold (default: <code>0.9</code>).</li>
+            <li><strong>top_k:</strong> Top-k sampling threshold (default: <code>40</code>).</li>
+            <li><strong>tfs_z:</strong> Tail free sampling filter (default: <code>1.0</code>).</li>
+            <li><strong>num_ctx:</strong> Max tokens used for context (default: <code>2048</code>).</li>
+            <li><strong>repeat_penalty:</strong> Penalizes token repetition (default: <code>1.1</code>).</li>
+            <li><strong>mirostat:</strong> Enables adaptive perplexity-based sampling (default: <code>0</code>).</li>
+            <li><strong>mirostat_eta:</strong> Learning rate for Mirostat adjustment (default: <code>0.1</code>).</li>
+            <li><strong>mirostat_tau:</strong> Target perplexity for Mirostat (default: <code>5.0</code>).</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- <section class="section" id="user-guide">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">
+          <i class="fas fa-tools"></i> User Guide
+        </h2>
+        <div class="content has-text-justified">
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
 
 
 <section class="section" id="Installation">
@@ -346,158 +432,76 @@ Frontend + MongoDB Storage
         </h2>
         <div class="content has-text-justified">
 
-          <h4 class="title is-4 mt-5">Step 1: Clone All Repositories</h4>
-          <p>OSSPREY consists of multiple modular components. Begin by cloning all required repositories:</p>
-          <pre><code>git clone https://github.com/OSS-PREY/OSSPREY-FrontEnd-Server
-git clone https://github.com/OSS-PREY/OSSPREY-BackEnd-Server
-git clone https://github.com/OSS-PREY/OSSPREY-ReACT-API
-git clone https://github.com/OSS-PREY/OSSPREY-Pex-Forecaster
-git clone https://github.com/OSS-PREY/OSSPREY-OSS-Scraper-Tool
-</code></pre>
-
-          <h4 class="title is-4 mt-5">Step 2: Front-End Installation</h4>
-
+          <h3 class="title is-4">App Installation</h3>
+          <p>To install the app, we have to do the following:</p>
           <ol>
-            <li><strong>Ensure Node.js & npm are installed (version 14.x or above):</strong>
-              <pre><code>sudo apt install npm</code></pre>
-            </li>
-
-            <li><strong>Install project dependencies:</strong>
-              <pre><code>npm install</code></pre>
-            </li>
-
-            <li><strong>Start development server (hot reload):</strong>
-              <pre><code>npm run dev</code></pre>
-            </li>
-
-            <li><strong>Build for production:</strong>
-              <pre><code>npm run build</code></pre>
-            </li>
-
-            <li><strong>Clear cache and reinstall (if build issues occur):</strong>
-              <pre><code>rm -rf node_modules package-lock.json
-npm cache clean --force
-npm install</code></pre>
-            </li>
-          </ol>
-
-          <h4 class="title is-4 mt-5">Step 3: Back-End Installation</h4>
-
-          <ol>
-            <li><strong>Create and activate Python environment (Python 3.10 recommended):</strong>
-              <pre><code>python3 -m venv venv
-source venv/bin/activate</code></pre>
-            </li>
-
-            <li><strong>Install Python dependencies:</strong><br>
-              Download <code>requirements.txt</code> from 
-              <a href="https://github.com/OSS-PREY/OSSPREY-Website/blob/main/static/installation-files/requirements.txt" target="_blank">GitHub</a> and run:
-              <pre><code>pip install -r requirements.txt</code></pre>
-            </li>
-
-            <li><strong>Navigate to OSSPREY-OSS-Scraper-Tool directory:</strong>
-              <pre><code>cd OSSPREY-OSS-Scraper-Tool</code></pre>
-            </li>
-
-            <li><strong>Install Rust and Cargo:</strong><br>
-              Follow the official guide at <a href="https://www.rust-lang.org/tools/install" target="_blank">rust-lang.org/tools/install</a>
-            </li>
-
-            <li><strong>Enviroment File Configuration</strong><br>
-              Create a <code>.env</code> file in the <code>OSSPREY-OSS-Scraper-Tool</code> directory with the following content:
-              <pre><code>GITHUB_TOKEN="PERSONAL-TOKEN" </code></pre>
-              Replace <code>PERSONAL-TOKEN</code> with your GitHub personal access token. The token should be fine-grained access tokens with read access to the public repositories on GitHub.
-            </li>
-
-
-
-            <li><strong>Prepare and build the OSS Scraper tool:</strong>
-              <pre><code>cargo update
-cargo clean
-cargo build
-cargo fix --bin "miner"</code></pre>
-              The built binary will appear inside the <code>target</code> directory.
-            </li>
-
-            <li><strong>Navigate to the core backend directory (OSSPREY-BackEnd-Server):</strong>
-              <pre><code>cd ../OSSPREY-BackEnd-Server</code></pre>
-              This directory contains the Flask server that serves API endpoints.
-            </li>
-
-            <li><strong>Install MongoDB and Mongosh:</strong><br> 
-              Use the provided scripts (<a href="https://github.com/OSS-PREY/OSSPREY-Website/blob/main/static/installation-files/install_mongo.sh">MongoDB</a> and <a href="https://github.com/OSS-PREY/OSSPREY-Website/blob/main/static/installation-files/install_mongosh.sh">Mongosh</a>) to install MongoDB and Mongosh:
-              <pre><code>sh install_mongo.sh
-sh install_mongosh.sh</code></pre>
-            </li>
-
-            <li><strong>Set up the database user in mongosh:</strong>
-              <pre><code>mongosh
-
-use decal-db
-db.createUser({
-  user: "ossprey-backend",
-  pwd: "FL3YyVGCr79xlPT0",
-  roles: [{ role: "readWrite", db: "decal-db" }]
-})
-</code></pre>
-            </li>
-
-            <li><strong>Download Foudational Data:</strong>
-              <a href="https://zenodo.org/records/15307373" target="_blank">Download</a> the foundational data and place it in the <code>parent</code> directory.
-              </li>
-
-            <li><strong>Insert data into MongoDB:</strong><br>
-              Run the following script from the given <a href="https://github.com/OSS-PREY/OSSPREY-Website/blob/main/static/installation-files/insert_data_to_mongodb.sh">Insert-Data</a> file.
-              <pre><code>sh insert_data_to_mongodb.sh</code></pre>
+            <li>
+              Install Mini-Conda on your computer (if already not installed).
+              The following link can be used for installation:
+              <a href="https://docs.anaconda.com/miniconda/install/#quick-command-line-install" target="_blank">LINK</a>.
             </li>
             <li>
-              <strong>Environment File Configuration</strong><br>
-              Create a <code>.env</code> file in the <code>OSSPREY-BackEnd-Server</code> directory with the following content:
-              <pre><code>GITHUB_TOKEN_1="PERSONAL-TOKEN-1" 
-GITHUB_TOKEN_2="PERSONAL-TOKEN-2"
-GITHUB_TOKEN_3="PERSONAL-TOKEN-3"
-GITHUB_TOKEN_4="PERSONAL-TOKEN-4"
-            
-PEX_GENERATOR_REPO_URL="https://github.com/arjashok/pex-forecaster.git"
-OSS_SCRAPER_REPO_URL="https://github.com/priyalsoni15/OSS-scraper.git"
-PEX_GENERATOR_DIR="/mnt/data1/OSPEX/root-linode/pex-forecaster"
-OSS_SCRAPER_DIR="/OSSPREY-OSS-Scraper-Tool"
-REACT_API_DIR="/OSSPREY-ReACT-API"
-GITHUB_USERNAME="GITHUB_USERNAME"
-MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db?retryWrites=true&w=majority"
-              </code></pre>
-              Replace <code>PERSONAL-TOKEN-1</code>, <code>PERSONAL-TOKEN-2</code>, <code>PERSONAL-TOKEN-3</code>, and <code>PERSONAL-TOKEN-4</code> with your GitHub personal access tokens. These should be fine-grained access tokens with read access to public repositories. Also, replace <code>GITHUB_USERNAME</code> with your GitHub username.
+              Clone the repo using git:
+              <pre><code>https://github.com/Nafiz43/EvidenceBot</code></pre>
             </li>
-            
-
-
-            <li><strong>Start the Flask backend using Gunicorn (production):</strong>
-              <pre><code>gunicorn -w 4 --max-requests 100 --max-requests-jitter 10 --timeout 120 -b 0.0.0.0:5000 run:app</code></pre>
+            <li>
+              Create and activate a new virtual environment:
+              <pre><code>conda create -n EvidenceBot python=3.10.0<br>conda activate EvidenceBot</code></pre>
             </li>
-
-
-            ngrok http --url=ossprey.ngrok.app 5000
-
-            <li><strong>Configuring NGROK:</strong>
-             <ul>
-              <li>Download and install ngrok from <a href="https://ngrok.com/download" target="_blank">ngrok.com/download</a></li>
-              <li>Sign up for a free account at <a href="https://ngrok.com/signup" target="_blank">ngrok.com/signup</a></li>
-              <li>Authenticate your ngrok account using the command below:</li> 
-              <pre><code>ngrok config add-authtoken YOUR_AUTH_TOKEN</code></pre>
-              <li>Start ngrok to expose your local server to the internet:</li>
-              <pre><code>ngrok http 5000</code></pre>
-              <li>Copy the forwarding URL provided by ngrok (e.g., <code>https://123456789.ngrok.io</code>) and use it to access your local server from anywhere.</li>
-              <li>To stop ngrok, simply press <code>Ctrl + C</code> in the terminal where ngrok is running.</li>
-             </ul>
+            <li>
+              Install all the requirements:
+              <pre><code>pip install -r requirements.txt</code></pre>
             </li>
-
-
-            <li><strong>Debug locally using Flask (development):</strong>
-              <pre><code>python -m flask run</code></pre>
-              Or, to allow external access:
-              <pre><code>python -m flask run --host=0.0.0.0 --port=5000</code></pre>
+            <li>
+              Install Ollama from the following 
+              <a href="https://ollama.com/download" target="_blank">LINK</a>.
+            </li>
+            <li>
+              Install Models using Ollama:
+              <pre><code>ollama pull MODEL_NAME</code></pre>
+              Replace <code>MODEL_NAME</code> with your desired model name. 
+              List of all the models is available at this 
+              <a href="https://ollama.com/download" target="_blank">link</a>.
+            </li>
+            <li>
+              Open the source directory, where the source code exists. 
+              Then, keep the documents that you want to analyze in the <code>DATA_DOCUMENTS</code> folder.
+            </li>
+            <li>
+              Open CLI (Command Line Interface) in the source directory and hit the following command:
+              <pre><code>ollama pull MODEL_NAME</code></pre>
+            </li>
+            <li>
+              To run the app, navigate to the project directory and execute the following command:
+              <pre><code>sh command.sh</code></pre>
             </li>
           </ol>
+
+          <h4 class="title is-5">Minimum System Requirements</h4>
+          <ul>
+            <li><strong>Processor:</strong> Modern multi-core CPU (at least 8+ cores)</li>
+            <li><strong>RAM:</strong> 32GB minimum</li>
+            <li><strong>Storage:</strong> 20GB for application code and dependencies</li>
+            <li><strong>GPU:</strong> CUDA-compatible GPU with 8GB+ VRAM</li>
+          </ul>
+          <p><strong>The amount of VRAM required depends on the model that we want to run. Here is an estimate:</strong></p>
+          <ul>
+            <li>7B model requires ~4 GB</li>
+            <li>13B model requires ~8 GB</li>
+            <li>30B model needs ~16 GB</li>
+            <li>65B model needs ~32 GB</li>
+          </ul>
+          <blockquote>
+            <strong>Note:</strong> While lower configurations are viable, performance may be compromised, leading to longer execution times and potential system slowdowns.
+          </blockquote>
+
+          <h4 class="title is-5">Cloud Deployment Alternative</h4>
+          <p>If deploying to cloud infrastructure:</p>
+          <ul>
+            <li>Standard virtual machine with 8+ vCPUs</li>
+            <li>32GB RAM</li>
+            <li>GPU acceleration if available</li>
+          </ul>
 
         </div>
       </div>
@@ -516,32 +520,30 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
           <i class="fab fa-docker"></i> Docker Installation Manual
         </h2>
 
-        <p class="has-text-justified">
-          Download the <code>Dockerfile</code> from the given <a href="https://github.com/OSS-PREY/OSSPREY-Website/blob/main/static/installation-files/Dockerfile" target="_blank">link</a>
+        <div class="content has-text-justified">
+          <p class="has-text-justified">
+          Download the <code>Dockerfile</code> from the given <a href="Dockerfile" target="_blank">link</a>
 
-          Use the following commands to build and run the Docker container securely. Ensure that your environment variables and sensitive credentials are properly configured beforehand:
+          Use the following commands to build and run the Docker container securely.
         </p>
-        <div class="container is-max-desktop" style="text-align: left;">
-          <pre><code>sudo docker build --build-arg GITHUB_USERNAME="priyalsoni15" \
-        --build-arg GITHUB_PAT="$(cat ~/.github_pat)" \
-        --build-arg GITHUB_TOKEN_1="$(cat ~/.github_token1)" \
-        --build-arg GITHUB_TOKEN_2="$(cat ~/.github_token2)" \
-        --build-arg GITHUB_TOKEN_3="$(cat ~/.github_token3)" \
-        --build-arg GITHUB_TOKEN_4="$(cat ~/.github_token4)" \
-        --build-arg MONGODB_USER="priyalsoniwritings" \
-        --build-arg MONGODB_PASSWORD="$(cat ~/.mongodb_password)" \
-        -t my-secure-image .
-        docker run -d --env-file .env -p 5001:5000 my-secure-image
-          </code></pre>
+
+        <h3>Build and Run Docker Container</h3>
+
+        <p><strong>1. Build the Docker image:</strong></p>
+        <pre><code>docker build -t evidencebot .</code></pre>
+
+        <p><strong>2. Run the Docker container and expose port 8501:</strong></p>
+<pre><code>docker run -it --rm -p 8501:8501 -v $(pwd)/DATA_DOCUMENTS:/app/DATA_DOCUMENTS evidencebot</code></pre>
+
+        <p>This command:</p>
+        <ul>
+          <li>Maps local port <code>8501</code> to container's port <code>8501</code></li>
+          <li>Mounts the <code>DATA_DOCUMENTS</code> folder so your documents are accessible inside the container</li>
+          <li>Removes the container after it exits (<code>--rm</code>)</li>
+        </ul>
         </div>
 
-        <div class="notification is-warning has-text-left">
-          <strong>Note:</strong> This Dockerfile involves some manual steps and may require debugging:
-          <ul style="margin-left: 1em;">
-            <li>The automatic creation of a MongoDB user is not supported and must be done manually.</li>
-            <li>Environment files such as <code>.env</code> must be created manually to securely store sensitive credentials; they are not embedded in the Dockerfile for security reasons.</li>
-          </ul>
-        </div>
+        
         
       </div>
     </div>
@@ -550,7 +552,7 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
 
 
 
-<section class="section" id="Docker">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
@@ -559,18 +561,7 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
         </h2>
         <p>
           This research was supported by the National Science Foundation under Grant No. 2020751, as well as by the Alfred P. Sloan Foundation through the OSPO for UC initiative (Award No. 2024-22424).
-        </p> <br>
-
-        <p>
-          Moreover, we extend our heartfelt gratitude to 
-          <a href="https://www.linkedin.com/in/likangyin/" target="_blank">Likang Yin</a>, 
-          <a href="https://anirudh-suresh-ramchandran.web.app/" target="_blank">Anirudh Ramchandran</a>, and 
-          <a href="https://www.linkedin.com/in/swatisinghvi99" target="_blank">Swati Singhvi</a> 
-          for their contributions to the development of 
-          <a href="https://ossustain.github.io/APEX/" target="_blank">APEX</a> and 
-          <a href="https://swatisinghvi99.github.io/EPEX/" target="_blank">EPEX</a>.
-          Several core functionalities of OSSPREY build upon and extend these earlier tools.
-        </p>        
+        </p> 
       </div>
     </div>
   </div>
@@ -584,7 +575,7 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
           License
         </h2>
         <p>
-          The OSSPREY project is licensed under the Apache License 2.0. 
+          The EvidenceBot project is licensed under the Apache License 2.0. 
           This permissive license allows you to use, modify, and distribute the software for both personal and commercial purposes, 
           as long as you include proper attribution and comply with the terms outlined in the license.
         </p>
@@ -629,16 +620,11 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
           (<a href="mailto:vfilkov@ucdavis.edu">vfilkov@ucdavis.edu</a>).
         </p>
         <p>
-          For technical questions, bug reports, or concerns regarding the codebase, please contact the current tech lead, 
+          For technical questions, bug reports, or concerns regarding the codebase, please contact the project lead, 
           <strong>Nafiz Imtiaz Khan</strong> 
           (<a href="mailto:nikhan@ucdavis.edu">nikhan@ucdavis.edu</a>).
         </p>
-        <p>
-          For general discussions, contributions, and community updates, join our 
-          <a href="https://join.slack.com/t/osspreyworkspace/shared_invite/zt-35bsf2ypc-tS1a5~~n~33FzVUZptKFUA" target="_blank">
-            OSSPREY Slack workspace
-          </a>.
-        </p>
+
         <p>
           We're excited to hear from you!
         </p>
@@ -647,6 +633,23 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
   </div>
 </section>
 
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@inproceedings{khan2025evidencebot,
+  author    = {Nafiz Imtiaz Khan and Vladimir Filkov},
+  title     = {EvidenceBot: A Privacy-Preserving, Customizable RAG-Based Tool for Enhancing Large Language Model Interactions},
+  booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering (FSE Companion '25)},
+  year      = {2025},
+  doi       = {10.1145/3696630.3728607},
+  isbn      = {979-8-4007-1276-0/2025/06},
+  location  = {Trondheim, Norway},
+  publisher = {ACM},
+  address   = {New York, NY, USA}
+}</code></pre>
+  </div>
+</section>
 
 <!-- 
 <section class="section" id="BibTeX">
