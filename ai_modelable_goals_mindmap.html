@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelable Goals with AI - Mindmap</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f3f9ff, #e6ecf0);
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .mindmap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .node {
+      background: #ffffff;
+      border-left: 6px solid #4285f4;
+      border-radius: 12px;
+      padding: 20px 30px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 900px;
+      width: 95%;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+    .node:hover {
+      transform: scale(1.01);
+    }
+    .node-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #1a237e;
+      margin-bottom: 10px;
+    }
+    .connection {
+      width: 2px;
+      height: 20px;
+      background-color: #90a4ae;
+    }
+    .agents {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .agents {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .agent {
+      background-color: #f0f8ff;
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.3s;
+    }
+    .agent:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    .agent-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1565c0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="mindmap">
+    <div class="node">
+      <div class="node-title">AI-Assisted Scientific Research</div>
+      <div>Bridging the gap between predictive models and actionable interventions</div>
+    </div>
+
+    <div class="connection"></div>
+
+    <div class="node">
+      <div class="node-title">Key Steps</div>
+      <ul>
+        <li>Feature Identification</li>
+        <li>Model Training</li>
+        <li>Feature Impact Analysis</li>
+        <li>Search Literature for Actionables</li>
+        <li>Map Actions to Features</li>
+        <li>Implement and Monitor Actions</li>
+      </ul>
+    </div>
+
+    <div class="connection"></div>
+
+    <div class="node">
+      <div class="node-title">AI Agents Architecture</div>
+      <div class="agents">
+        <div class="agent">
+          <div class="agent-title">Agent 1: Model Builder</div>
+          <ul>
+            <li><strong>Input:</strong> Raw data from experiments, MCP data stores</li>
+            <li><strong>Process:</strong>
+              <ul>
+                <li>Extract measurable features</li>
+                <li>Train models using selected features</li>
+                <li>Analyze with SHAP or feature importance</li>
+              </ul>
+            </li>
+            <li><strong>Output:</strong> Ranked features + predictive model</li>
+            <li><strong>Uses MCP:</strong> Data pipeline, storage, compute cluster</li>
+          </ul>
+        </div>
+
+        <div class="agent">
+          <div class="agent-title">Agent 2: Literature Miner</div>
+          <ul>
+            <li><strong>Input:</strong> Ranked features from Agent 1</li>
+            <li><strong>Process:</strong>
+              <ul>
+                <li>Search open-access papers via MCP-crawler</li>
+                <li>Extract interventions using NLP/RAG</li>
+                <li>Map actions to features with confidence scores</li>
+              </ul>
+            </li>
+            <li><strong>Output:</strong> Actionable suggestions with sources</li>
+            <li><strong>Uses MCP:</strong> Semantic search, LLM-based RAG, caching</li>
+          </ul>
+        </div>
+
+        <div class="agent">
+          <div class="agent-title">Agent 3: Deployer & Feedbacker</div>
+          <ul>
+            <li><strong>Input:</strong> Actions + models from Agents 1 & 2</li>
+            <li><strong>Process:</strong>
+              <ul>
+                <li>Simulate or implement interventions</li>
+                <li>Capture impact on real-world or synthetic data</li>
+                <li>Loop feedback to other agents</li>
+              </ul>
+            </li>
+            <li><strong>Output:</strong> Model improvements, adjusted priorities</li>
+            <li><strong>Uses MCP:</strong> Monitoring agents, feedback messaging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="connection"></div>
+
+    <div class="node">
+      <div class="node-title">Infrastructure</div>
+      <div>MCP servers coordinate data sharing, compute, and orchestration across agents in real time.</div>
+    </div>
+
+    <div class="connection"></div>
+
+    <div class="node">
+      <div class="node-title">Goal</div>
+      <div>Achieve modelable scientific outcomes through adaptive, explainable, and evidence-backed AI agents.</div>
+    </div>
+  </div>
+</body>
+</html>
