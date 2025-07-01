@@ -26,7 +26,8 @@ def log_to_csv(question, answer, m_name):
     if not os.path.isfile(log_path):
         with open(log_path, mode="w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
-            writer.writerow(["timestamp", "question", "answer"])
+            # include the model name to match the logged values
+            writer.writerow(["timestamp", "question", "answer", "model"])
 
     # Append the log entry
     with open(log_path, mode="a", newline="", encoding="utf-8") as file:
