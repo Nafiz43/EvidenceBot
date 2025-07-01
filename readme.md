@@ -59,7 +59,7 @@ To install the app, we have to do the following:
    ```bash
    ollama pull MODEL_NAME
    ```
-   Replace MODEL_NAME with your desired model name. List of all the models is available at this [link](https://ollama.com/download).
+   Replace MODEL_NAME with your desired model name. List of all the models are available at this [link](https://ollama.com/download).
 
 7. Open the source directory, where the source code exists. Then, keep the documents that you want to analyze in the DATA_DOCUMENTS folder.
 
