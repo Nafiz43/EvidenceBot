@@ -25,6 +25,10 @@ count =0
 
 if "first_click_done" not in st.session_state:
     st.session_state.first_click_done = False
+if "conversation" not in st.session_state:
+    st.session_state.conversation = []
+if "qa_pipeline" not in st.session_state:
+    st.session_state.qa_pipeline = None
 
 from prompt_template_utils import get_prompt_template
 from langchain.vectorstores import Chroma
@@ -36,9 +40,8 @@ from constants import (
     CHROMA_SETTINGS,
 )
 
-global x
+# store uploaded query file data
 global query_file_data
-x=''
 # prompt =''
 def get_ollama_models():
     try:
@@ -236,19 +239,60 @@ def get_llm_response(query = "Query"):
     logging.info(f"Display Source Documents set to: {show_sources}")
     logging.info(f"Use history set to: {use_history}")
     cnt =0
-    qa = retrieval_qa_pipline(device_type, use_history, promptTemplate_type=model_type)
+    if st.session_state.qa_pipeline is None:
+        st.session_state.qa_pipeline = retrieval_qa_pipline(device_type, use_history, promptTemplate_type=model_type)
+    qa = st.session_state.qa_pipeline
     res = qa(query)
     answer, docs = res["result"], res["source_documents"]
     LLM_ANSWER = answer
     LLM_SOURCE_DOC = docs
     utils.log_to_csv(query, answer, m_name)
+    st.session_state.conversation.append({"question": query, "answer": answer, "sources": docs})
     return 1
+
+
+def format_docs(docs):
+    """Return HTML for a list of Document objects."""
+    html_parts = []
+    for i, doc in enumerate(docs, 1):
+        src = os.path.basename(doc.metadata.get("source", ""))
+        text = doc.page_content.strip()
+        snippet = text[:200] + ("..." if len(text) > 200 else "")
+        html_parts.append(f"<b>Doc {i} [{src}]</b>: {snippet}")
+    return "<br>".join(html_parts)
+
+
+def display_history():
+    history_html = ""
+    for item in st.session_state.conversation:
+        history_html += f'<b><h5>Question:</h5></b> {item["question"]}<br>'
+        history_html += f'<b><h5>LLM Response:</h5></b> {item["answer"]}<br>'
+        history_html += f'<b><h5>SOURCE CONTEXT:</h5></b> {format_docs(item["sources"])}<hr>'
+    st.markdown(
+        """
+        <style>
+        .scrollable-div {
+            max-height: 800px;
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown(f'<div class="scrollable-div">{history_html}</div>', unsafe_allow_html=True)
     
 if __name__ == "__main__":
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(filename)s:%(lineno)s - %(message)s",
         level=logging.INFO,
     )
+    # Show previous conversation history so it can be used as context for the
+    # next question.
+    display_history()
     if st.button("Send"):
         if not st.session_state.first_click_done:
           print("sending value")
@@ -261,37 +305,13 @@ if __name__ == "__main__":
                 st.warning("Enter your instruction")
             else:
                 get_llm_response(chat_input)
-                x += '<b><h5>LLM Response:</h5></b>'
-                x += LLM_ANSWER
-
-                x += '<b><h5>SOURCE CONTEXT:</h5></b>'
-                x += str(LLM_SOURCE_DOC)
-
-                st.markdown(
-                    """
-                    <style>
-                    .scrollable-div {
-                        max-height: 800px; /* Adjust the height as needed */
-                        overflow-y: scroll;
-                        padding: 10px;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                        background-color: #f9f9f9;
-                    }
-                    </style>
-                    """,
-                    unsafe_allow_html=True,
-                )
-
-                # Display LLM Response
-                st.markdown(f'<div class="scrollable-div">{x}</div>', unsafe_allow_html=True)
+                display_history()
 
         elif selected_option == "Batch Question Mode":
             progress_text = st.empty()  # Create an empty placeholder
             for index, row in query_file_data.iterrows():
-                # if index == 0:
-                #   continue  # Skip the first row
                 get_llm_response(row[query_file_data.columns[0]])
                 progress_text.text(f"Processed {index + 1} out of {len(query_file_data)}")
             st.write("Processing Finished...")
+            display_history()
         
