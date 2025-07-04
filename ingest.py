@@ -32,7 +32,7 @@ import sys
 
 # EMBEDDING_MODEL_NAME = sys.argv[1]  # Retrieve the passed value
 EMBEDDING_MODEL_NAME = sys.argv[1] if len(sys.argv) > 1 else None
-CHUNK_SIZE = int(sys.argv[2]) if len(sys.argv) > 1 else None
+CHUNK_SIZE = int(sys.argv[2]) if len(sys.argv) > 2 else None
 
 print(f"Received value: {EMBEDDING_MODEL_NAME}")
 print(f"CHUNK_SIZE: {CHUNK_SIZE}")
